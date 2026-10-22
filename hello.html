@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Hi how are you, hope you are good</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: #dacfd6;
+      color: #40089b;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+    main { padding: 2rem; text-align: center; }
+    p {
+      margin: 0 0 .8rem;
+      color: #e4e2dd;
+      font: 700 .72rem/1.4 Arial, sans-serif;
+      letter-spacing: .22em;
+      text-transform: lowercase;
+    }
+    h1 { margin: 0; font-size: clamp(3.5rem, 10vw, 6rem); font-weight: 400; letter-spacing: -.045em; }
+    h1 span { color: #12cc66; font-style: italic; }
+    .rule { width: 44px; height: 1px; margin: 1.7rem auto 0; background: #c7b89c; }
+    nav { position: absolute; top: 1.5rem; right: 2rem; display: flex; gap: 1.25rem; font: 600 .8rem Arial, sans-serif; }
+    nav a { color: #40089b; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { text-decoration: underline; }
+    @media (max-width: 480px) { nav { right: 1rem; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="hello.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <p>A little hello is good so always say hello</p>
+    <h1>Hello, <span>how are you</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+  </main>
+</body>
+</html>

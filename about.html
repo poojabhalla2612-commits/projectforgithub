@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>About | A Little Hello</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; background: #dacfd6; color: #40089b; font-family: Georgia, 'Times New Roman', serif; }
+    nav { position: absolute; top: 1.5rem; right: 2rem; display: flex; gap: 1.25rem; font: 600 .8rem Arial, sans-serif; }
+    nav a { color: #40089b; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { text-decoration: underline; }
+    main { width: min(100% - 2rem, 680px); padding: 3rem 2rem; text-align: center; }
+    .eyebrow { margin: 0 0 .8rem; color: #786a75; font: 700 .72rem/1.4 Arial, sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(3rem, 9vw, 5.5rem); font-weight: 400; letter-spacing: -.045em; }
+    h1 span { color: #12a85a; font-style: italic; }
+    .copy { max-width: 540px; margin: 1.5rem auto 0; color: #514652; font: 1.1rem/1.75 Arial, sans-serif; }
+    .links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; font: 600 .9rem Arial, sans-serif; }
+    .links a { color: #40089b; }
+    @media (max-width: 480px) { nav { right: 1rem; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="hello.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <p class="eyebrow">A little about us</p>
+    <h1>Good things <span>start</span> with hello.</h1>
+    <p class="copy">This is a small corner of the web built around a simple idea: a kind greeting can make someone’s day feel a little brighter. We’re glad you stopped by.</p>
+    <div class="links"><a href="hello.html">Back home</a><a href="contact.html">Get in touch</a></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171813">
+  <meta name="description" content="A little note to Pooja.">
+  <title>Hello, Pooja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    :root { color-scheme: dark; --cream:#f4efe4; --gold:#dfc48e; --soft:#c5c0b4; }
+    body { margin:0; min-height:100vh; color:var(--cream); background:#171813; font-family:'DM Sans',sans-serif; }
+    .frame { min-height:100vh; position:relative; isolation:isolate; overflow:hidden; display:flex; flex-direction:column; background:linear-gradient(90deg,rgba(17,19,15,.9) 0%,rgba(17,19,15,.72) 48%,rgba(17,19,15,.28) 100%),linear-gradient(0deg,rgba(15,17,13,.6),transparent 60%),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=90') center/cover; }
+    .frame::before { content:""; position:absolute; z-index:-1; inset:18px; border:1px solid rgba(239,229,205,.28); }
+    .frame::after { content:""; position:absolute; z-index:-1; width:54vw; aspect-ratio:1; right:-22vw; top:-32vw; border:1px solid rgba(223,196,142,.28); border-radius:50%; box-shadow:0 0 0 54px rgba(223,196,142,.04),0 0 0 108px rgba(223,196,142,.025); }
+    header,footer { display:flex; justify-content:space-between; align-items:center; padding:34px 8%; animation:appear 1s both; }
+    .brand { display:flex; align-items:center; gap:12px; text-transform:uppercase; letter-spacing:.28em; font-size:10px; font-weight:600; }
+    .seal { width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--gold); border-radius:50%; color:var(--gold); font:italic 19px 'Playfair Display',serif; letter-spacing:0; }
+    .top-note, footer { color:var(--soft); font-size:9px; letter-spacing:.24em; text-transform:uppercase; }
+    main { flex:1; display:grid; place-items:center; padding:7vh 10%; text-align:center; }
+    .greeting { max-width:800px; animation:appear 1.15s .12s both; }
+    .eyebrow { display:flex; justify-content:center; align-items:center; gap:14px; color:var(--gold); font-size:10px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; }
+    .eyebrow::before,.eyebrow::after { content:""; width:34px; height:1px; background:var(--gold); }
+    h1 { margin:25px 0 16px; font:500 clamp(76px,13vw,160px)/.95 'Playfair Display',serif; letter-spacing:-.055em; }
+    h1 span { color:var(--gold); font-style:italic; }
+    .message { max-width:440px; margin:24px auto 0; color:#d3cfc5; font-size:15px; line-height:1.9; }
+    .ornament { display:flex; align-items:center; justify-content:center; gap:12px; margin:34px auto 0; color:var(--gold); font-size:13px; }
+    .ornament::before,.ornament::after { content:""; width:52px; height:1px; background:rgba(223,196,142,.55); }
+    footer { padding-top:20px; padding-bottom:42px; }
+    .footer-mark { display:flex; align-items:center; gap:10px; }
+    .footer-mark::before { content:"✦"; color:var(--gold); font-size:12px; }
+    @keyframes appear { from { opacity:0; transform:translateY(15px); } to { opacity:1; transform:translateY(0); } }
+    @media(max-width:600px) { .frame{background-position:57% center;background-image:linear-gradient(90deg,rgba(17,19,15,.88),rgba(17,19,15,.63)),linear-gradient(0deg,rgba(15,17,13,.58),transparent 60%),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85')} .frame::before{inset:10px} header,footer{padding-left:10%;padding-right:10%}.top-note{max-width:120px;text-align:right;line-height:1.8}h1{font-size:clamp(72px,17vw,112px)}.message{font-size:14px}footer{font-size:8px} }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <header>
+      <div class="brand"><span class="seal">P</span><span>A little note</span></div>
+      <div class="top-note">Made for this moment</div>
+    </header>
+    <main>
+      <section class="greeting" aria-labelledby="hello-title">
+        <div class="eyebrow">With warmth</div>
+        <h1 id="hello-title">Hello,<br><span>Pooja.</span></h1>
+        <p class="message">A little space, a softer moment, and a beautiful hello—just for you.</p>
+        <div class="ornament" aria-hidden="true">✧</div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-mark">A moment to enjoy</div>
+      <div>With love, always</div>
+    </footer>
+  </div>
+</body>
+</html>
